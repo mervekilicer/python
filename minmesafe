@@ -1,0 +1,19 @@
+import math
+
+# Euclidean distance function
+def euclideanDistance(point1, point2):
+    return math.sqrt((point2[0] - point1[0]) ** 2 + (point2[1] - point1[1]) ** 2)
+
+# List of points
+points = [(2, 3), (12, 30), (40, 50), (5, 1), (12, 10), (3, 4)]
+
+# Calculate distances between all point pairs
+distances = []
+for i in range(len(points)):
+    for j in range(i + 1, len(points)):
+        dist = euclideanDistance(points[i], points[j])
+        distances.append(dist)
+
+# Find and print the minimum distance
+min_distance = min(distances)
+min_distance
